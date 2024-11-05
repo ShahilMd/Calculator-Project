@@ -1,4 +1,4 @@
-#📚 Calculator
+# 📚 Calculator
 A sleek and responsive calculator web application built with HTML, CSS, and JavaScript.
 
 ## 🔍 About
