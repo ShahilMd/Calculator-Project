@@ -1,7 +1,8 @@
 📚 Calculator
 A sleek and responsive calculator web application built with HTML, CSS, and JavaScript.
 <p align="center">
-  <img src="calculator.png" alt="Calculator Screenshot" width="400">
+  <img src="screenshot/calculator.png" alt="Calculator Screenshot" width="400">
+  <img src="screenshot/calculator_use.png" alt="Calculator Screenshot" width="400">
 </p>
 🔍 About
 The Calculator is a simple yet elegant tool that provides users with a seamless and intuitive experience for performing basic arithmetic operations. With its clean and modern design, the application blends form and function to create a visually appealing and user-friendly interface.
