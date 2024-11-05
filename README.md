@@ -5,6 +5,7 @@ A sleek and responsive calculator web application built with HTML, CSS, and Java
 </p>
 🔍 About
 The Calculator is a simple yet elegant tool that provides users with a seamless and intuitive experience for performing basic arithmetic operations. With its clean and modern design, the application blends form and function to create a visually appealing and user-friendly interface.
+
 ## 🎯 Demo
 Try out the game here: [Live Demo](https://shahilmd.github.io/Calculator-Project/)
 
