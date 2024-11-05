@@ -1,0 +1,151 @@
+body {
+  background-color:rgb(213, 213, 213) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+#cal-body {
+  width: 400px;
+  border-radius: 30px;
+  background: #e0e5ec;
+  box-shadow: -8px -8px 12px rgba(255,255,255,0.8), 
+              8px 8px 12px rgba(0,0,0,0.2),
+              inset 2px 2px 4px rgba(255,255,255,0.4),
+              inset -2px -2px 4px rgba(0,0,0,0.1);
+  padding: 45px;
+  scale: 0.7;
+  transition: transform 0.3s ease;
+}
+
+#cal-body:hover {
+  transform: translateY(-5px);
+}
+
+.input input {
+  height: 100px;
+  width: 100%;
+  border-radius: 20px;
+  background: #e0e5ec;
+  box-shadow: inset -4px -4px 8px rgba(255,255,255,0.8),
+              inset 4px 4px 8px rgba(0,0,0,0.2);
+  border: 0;
+  color: #2d3436;
+  font-size: 2.5rem;
+  padding: 0 30px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.input input:focus {
+  outline: none;
+  background: #e8ecf2;
+  color: #2d3436;
+  box-shadow: inset -6px -6px 10px rgba(255,255,255,0.8),
+              inset 6px 6px 10px rgba(0,0,0,0.2);
+}
+
+.buttons {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.buttons button {
+  cursor: pointer;
+  height: 65px;
+  width: 65px;
+  border: 0;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  background: #e0e5ec;
+  box-shadow: -4px -4px 8px rgba(255,255,255,0.8),
+              4px 4px 8px rgba(0,0,0,0.2);
+  color: #2d3436;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttons button:hover {
+  background: #e8ecf2;
+  transform: translateY(-2px);
+}
+
+.buttons button:active {
+  box-shadow: inset -4px -4px 8px rgba(255,255,255,0.8),
+              inset 4px 4px 8px rgba(0,0,0,0.2);
+  transform: translateY(0);
+}
+
+/* Operator Buttons (+, -, *, /) */
+.buttons button:nth-child(4) {
+  background: linear-gradient(145deg, #4b6cb7, #182848);
+  color: #ffffff;
+  box-shadow: -4px -4px 8px rgba(255,255,255,0.4),
+              4px 4px 8px rgba(0,0,0,0.3);
+}
+
+.buttons button:nth-child(4):hover {
+  background: linear-gradient(145deg, #182848, #4b6cb7);
+}
+
+/* Special width buttons (C and =) */
+button[style*="width: 140px"] {
+  width: 140px !important;
+  border-radius: 30px !important;
+  font-size: 1.6rem !important;
+  background: #e0e5ec;
+}
+
+/* Clear button */
+button[style*="width: 140px"]:first-of-type {
+  background: linear-gradient(145deg, #ff6b6b, #ee5253);
+  color: white;
+}
+
+button[style*="width: 140px"]:first-of-type:hover {
+  background: linear-gradient(145deg, #ee5253, #ff6b6b);
+}
+
+/* Equals button */
+button[style*="width: 140px"]:last-of-type {
+  background: linear-gradient(145deg, #20bf6b, #0b8043);
+  color: white;
+}
+
+button[style*="width: 140px"]:last-of-type:hover {
+  background: linear-gradient(145deg, #0b8043, #20bf6b);
+}
+
+/* Add subtle animation for button press */
+@keyframes buttonPress {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.buttons button:active {
+  animation: buttonPress 0.2s ease;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  #cal-body {
+      width: 320px;
+      padding: 30px;
+  }
+  
+  .buttons button {
+      height: 55px;
+      width: 55px;
+      font-size: 1.5rem;
+  }
+  
+  button[style*="width: 140px"] {
+      width: 120px !important;
+  }
+}
